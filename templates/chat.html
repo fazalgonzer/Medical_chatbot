@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Medical Bot</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/medicallogo.PNG') }}" alt="Medical Logo" class="logo">
+            <h1>Medical Bot</h1>
+        </div>
+        
+        
+        <h2><b>Please enter your query</b></h2>
+        <form action="/upload" method="post">
+            <textarea name="user_input" rows="4" cols="50" placeholder="Enter your query here..."></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br><b class="notification">{{notification}}</b>
+    </div>
+</body>
+</html>
